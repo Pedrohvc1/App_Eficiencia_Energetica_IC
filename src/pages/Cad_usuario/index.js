@@ -24,26 +24,26 @@ export default function Cad_usuario() {
             style={styles.input}
             placeholder="Nome"
             autoCorrect={false}
-            // onChangeText={()=>{}}
+            onChangeText={()=>{}}
             />
 
             <TextInput
             style={styles.input}
             placeholder="Email"
             autoCorrect={false}
-            // onChangeText={()=>{}}
+            onChangeText={()=>{}}
             />
             <TextInput
             style={styles.input}
             placeholder="Senha"
             autoCorrect={false}
-            // onChangeText={()=>{}}
+            onChangeText={()=>{}}
             />
             <TextInput
             style={styles.input}
             placeholder="Confirmar senha"
             autoCorrect={false}
-            // onChangeText={()=>{}}
+            onChangeText={()=>{}}
             />
                 
                 <Text>Ao criar uma conta, você concorda com os 

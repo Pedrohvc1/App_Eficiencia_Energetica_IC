@@ -32,6 +32,7 @@ export default function Login() {
             style={styles.input}
             placeholder="Senha"
             autoCorrect={false}
+            secureTextEntry={true}
             onChangeText={()=>{}}
             />
                 
@@ -65,13 +66,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '90%'    
     },
-
+    
+    image: {
+        width: 350,
+        height: 350,
+        width: '100%',
+        alignItems: 'center',
+        justifyContent:'center'
+      },
     title:{       
-        fontSize: 24,
+        fontSize: 30,
         fontWeight:'bold',
         marginTop: 28,
         marginBottom: 12,
-        color:'f7941d', //laranja
+        color:'#f7941d', //laranja
         justifyContent: 'center',
         alignItems: 'center'        
     },
@@ -100,13 +108,16 @@ const styles = StyleSheet.create({
       btnCadastro:{
         fontSize: 12,
         fontWeight:'bold',
-        marginTop: 6,
+        marginTop: 15,
         marginBottom: 12,   
         height: 100,
-        color: 'grey'
+        color: '#121212'
       },
       cadastroText:{
-        color: '##a0a0a0',    
+        fontSize: 16,
+        color: '#808080',
+        fontWeight: 'bold'
+            
       },
     
       btnContinue:{
@@ -126,13 +137,6 @@ const styles = StyleSheet.create({
           fontSize: 12,
           color: '#fff',
           fontWeight: 'bold'
-      },
-      image: {
-        width: 350,
-        height: 350,
-        width: '100%',
-        alignItems: 'center',
-        justifyContent:'center'
       }
 })
 
