@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, View, 
-    TextInput, TouchableOpacity, Image} from 'react-native';
-import * as Animatable from 'react-native-animatable'
+    TextInput, TouchableOpacity} from 'react-native'
 import {useNavigation} from '@react-navigation/native'
+import { AntDesign } from '@expo/vector-icons'
 
 export default function Cad_usuario() {
   const navigation = useNavigation(); 
@@ -11,14 +11,19 @@ export default function Cad_usuario() {
      
      
       <View style={styles.containerTitle}>
-      <Text style={styles.title}>EFICIÊNCIA ENERGÉTICA</Text>
-       
+        
+        <TouchableOpacity style={styles.btnVoltar} >
+          <AntDesign name="arrowleft" size={30} color="black" />
+        </TouchableOpacity>     
+
+        <Text style={styles.title}>EFICIÊNCIA ENERGÉTICA</Text>
+
       </View>
 
       <View
         style={styles.containerForm}>
             
-            <Text style={styles.title2}>CRIAR CONTA</Text>  
+            <Text style={styles.title2}>CRIAR USUÁRIO</Text> 
 
             <TextInput
             style={styles.input}
@@ -46,14 +51,19 @@ export default function Cad_usuario() {
             onChangeText={()=>{}}
             />
                 
-                <Text style={styles.x}>Ao criar uma conta, você concorda com os 
+            <Text style={styles.x}>Ao criar uma conta, você concorda com os 
                   Termos de Uso e Privacidade do aplicativo</Text>  
-            <TouchableOpacity 
+            
+
+           
+        </View>
+        <View
+        style={styles.containerButton}>
+          <TouchableOpacity 
             style ={styles.btnContinue}>
             <Text style ={styles.continueText}>CONTINUE</Text>
             </TouchableOpacity>
 
-            
         </View>
 
 
@@ -70,6 +80,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',        
     width: '90%',        
   },
+  containerTitle:{
+    flex:0.4,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#87cefa',
+    width: '150%',      
+  }, 
+  containerButton:{
+    flex:0.4,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%'  
+  },
     title:{       
       fontSize: 20,
       fontWeight:'bold',
@@ -85,7 +110,7 @@ const styles = StyleSheet.create({
       marginBottom: 12,
       color:'#004c94',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     containerForm:{
       flex: 2,
@@ -125,6 +150,11 @@ const styles = StyleSheet.create({
     x:{
       fontSize: 14,
       color: '#004c94',
+      alignItems: 'center',
+      justifyContent:'center'        
   },
-         
+    btnVoltar: {
+      alignItems: 'left',
+      justifyContent:'up'   
+    }
 })
